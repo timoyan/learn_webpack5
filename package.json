@@ -5,20 +5,30 @@
   "author": "Timo <tomyan13@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/cli": "^7.10.5",
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
     "babel-loader": "^8.1.0",
+    "css-loader": "^3.6.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
+    "style-loader": "^1.2.1",
+    "typescript": "^3.9.7",
     "webpack": "^5.0.0-beta.22",
-    "webpack-cli": "^4.0.0-beta.8"
+    "webpack-cli": "3",
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "rxjs": "^6.6.0"
   },
   "scripts": {
-    "build": "npx webpack --mode production"
+    "build": "rm -rf dist && npx webpack --mode production",
+    "start": "npx webpack-dev-server --mode development --open --hot"
   }
 }
